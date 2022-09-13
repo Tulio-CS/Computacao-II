@@ -15,24 +15,13 @@ class Pessoa():
     
     def casar(self,pessoa):
         """Altera o conjuge do objeto pessoa caso o mesmo não seja casado"""
-        if self.conjuge == "sem conjuge":
+        if self.conjuge == "sem conjuge" and pessoa.conjuge == "sem conjuge":
             self.conjuge = pessoa
             pessoa.conjuge = self
         else:
-            print("{} ja é casada".format(self.nome))
+            print("Erro, não foi possivel realisar este casamento")
 
 
-Tulio = Pessoa("Tulio","male","cpf")
-Carol = Pessoa("Carol","fem","cpf")
-Vini = Pessoa("Vini","male","1006")
-Tulio.informaConjuge()
-Tulio.casar(Carol)
-Tulio.informaConjuge()
-Carol.informaConjuge()
-Carol.casar(Vini)
-Carol.informaConjuge()
-
-
-
-
+Tulio = Pessoa("tulio","homem","10666")
+Bruno = Pessoa("Bruno","homem","10523")
 
