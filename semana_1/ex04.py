@@ -3,7 +3,7 @@
 from math import sqrt
 
 class Ponto2D():
-    def __init__(self,x,y):
+    def __init__(self,x = 0 ,y = 0):
         """Funçao que cria um ponto em um plano dado seus pontos x e y"""
         self.x = x
         self.y = y
