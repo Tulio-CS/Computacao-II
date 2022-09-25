@@ -24,7 +24,7 @@ class Funcionario():
             print("Esse funcionario ja foi demitido") 
 
 if __name__ == "__main__":
-    jorge = Funcionario("Jorge","ri",100,"25/12/2004","10677777710",True)
+    jorge = Funcionario("Jorge","ri",100,"01/01/2000","123.456.789-00",True)
     jorge.bonificar(101)
     print(jorge.salario)
     print(jorge.ativo)

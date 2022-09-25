@@ -11,7 +11,7 @@ class Veiculo:
     def mover(self,km):
         """funcao que verifica se o automovel possui combustivel para locomover determinada kilometragem
         em caso afirmativo ela anda com o veiculo e diminui sua quantidade de combustivel"""
-        if (self.__qtd_comb * self.cons_comb) >= km:
+        if (self.__qtd_comb / self.cons_comb) >= km:
             self.__qtd_comb -= (km * self.cons_comb)
             print("o veiculo andou {}".format(km))
         else:
