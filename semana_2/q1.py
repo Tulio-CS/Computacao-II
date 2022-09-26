@@ -13,17 +13,16 @@ class retangulo:
     def perimetro(self):
         return (2 * self.base) + (2 * self.altura)
 
-class caixa:
+class caixa(retangulo):
     def __init__(self,base_1 , base_2, altura):
-        self.base_1 = base_1
-        self.base_2 = base_2
-        self.altura = altura
+        super().__init__(base_1,base_2)
+        self.altura2 = altura
     
     def volume(self):
-        return self.base_1 * self.base_2 * self.altura
+        return super().area() * self.altura2
     
     def area(self):
-        return 2 * ((self.base_1 * self.base_2) + (self.base_1 * self.altura) + (self.base_2 * self.altura))
+        return 2 * ((self.base * self.altura) + (self.base * self.altura2) + (self.altura * self.altura2))
 
 class circulo:
     def __init__(self,raio):
