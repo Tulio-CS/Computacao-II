@@ -30,7 +30,7 @@ class funcionarios:
 
 class trabalhadorAssalariado (funcionarios):
     def __init__ (self, nome, cpf):
-        funcionarios._init_(self, nome, cpf)
+        funcionarios.__init__(self, nome, cpf)
 
     def definir_salario (self, salario):
         if salario > 0:
@@ -41,7 +41,7 @@ class trabalhadorAssalariado (funcionarios):
 
 class trabalhadorHorista (funcionarios):
     def __init__ (self, nome, cpf, valor, horas):
-        funcionarios._init_(self, nome, cpf)
+        funcionarios.__init__(self, nome, cpf)
         self.__valor = valor
         self.__horas = horas
 
@@ -68,7 +68,7 @@ class trabalhadorHorista (funcionarios):
             print('Esse valor não é valido')
 
     def calcula_pagamento(self):
-        self.salario = self._valor * self._horas
+        self.salario = self.__valor * self.__horas
         print(self.salario)
         
     def __str__(self):
@@ -79,5 +79,5 @@ class trabalhadorHorista (funcionarios):
 
 #########################################################
 
-t = trabalhadorHorista()
+t = trabalhadorHorista("nome","cpf",10,15)
 print(t)
