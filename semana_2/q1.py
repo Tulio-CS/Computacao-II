@@ -6,8 +6,13 @@ class retangulo:
     def __init__(self,base,altura):
         """Iniciando um objeto da classe retangulo
         int, int -> obj"""
-        self.base = base
-        self.altura = altura
+        if base < 0 or altura < 0:
+            print("os valores nao podem ser negativos")
+            self.base = 0
+            self.altura = 0
+        else:
+            self.base = base
+            self.altura = altura
     
     def area(self):
         """Calculando a area de um retangulo dadas sua base e altura
@@ -23,8 +28,13 @@ class caixa(retangulo):
     def __init__(self,base_1 , base_2, altura):
         """Iniciando um objeto da classe caixa, derivada da classe retangulo
         int, int, int -> obj"""
-        super().__init__(base_1,base_2)
-        self.altura2 = altura
+        if base_1 < 0 or base_2 < 0 or altura < 0:
+            print("Os valores nao podem ser menores do que 0")
+            super().__init__(0,0)
+            self.altura2 = 0
+        else:
+            super().__init__(base_1,base_2)
+            self.altura2 = altura
     
     def volume(self):
         """calcula o volume da caixa multiplicando a area do retangulo correspondente
@@ -41,7 +51,11 @@ class circulo:
     def __init__(self,raio):
         """iniciando um objeto circulo, com um determinado raio
         int -> obj"""
-        self.raio = raio
+        if raio < 0:
+            print("O raio nao pode ser menor do que 0")
+            self.raio = 0
+        else:
+            self.raio = raio
 
     def area(self):
         """Calculando a area de um circulo a partir de seu raio
@@ -57,8 +71,14 @@ class cilindro(circulo):
     def __init__(self, raio, altura):
         """iniciando um objeto classe cilindo, derivada da classe circulo
         int, int -> obj"""
-        super().__init__(raio)
-        self.altura = altura
+        if raio < 0 or altura < 0:
+            print("Os valores nao podem ser menor do que 0")
+            super().__init__(0)
+            self.altura = 0
+        else:
+            super().__init__(raio)
+            self.altura = altura
+
     
     def volume(self):
         """Calculando o volume de um cilindo a partir da area de seu circulo com sua altura

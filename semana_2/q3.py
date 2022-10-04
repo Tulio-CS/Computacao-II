@@ -39,7 +39,7 @@ class ponto:
     def __str__(self):
         """Definindo a string que representa o objeto ponto
         obj -> str"""
-        return ("{} , {}".format(self.x,self.y))
+        return ("({} , {})".format(self.x,self.y))
 
 
 
