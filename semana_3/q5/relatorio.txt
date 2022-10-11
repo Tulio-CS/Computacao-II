@@ -1,0 +1,6 @@
+Numero de linhas : 18
+Numero de frases : 31
+Numero de palavras : 279
+Numero de linhas em branco : 2
+Numero de paragrafos : 3
+Numero de caracteres : 1376

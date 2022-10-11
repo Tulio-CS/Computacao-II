@@ -1,0 +1,22 @@
+#Aluno: Tulio Castro Silva
+
+def copia (arq1, arq2):
+    """Esta funcao tenta abrir um arquivo e cirar uma copia do mesmo 
+    excluindo as linhas comecadas com #, se falhar retorna uma mensagem de erro"""
+    try:
+        """tratando o erro de o arquivo inserido nao existir"""
+        arquivo1 = open(arq1 , "r")
+        arquivo2 = open(arq2 , "w")
+        for linha in arquivo1:
+            if linha[0] == "#":
+                continue
+            else:
+                arquivo2.write(linha)
+        arquivo1.close()
+        arquivo2.close()
+    except FileNotFoundError:
+        print("O arquivo inserido não existe")
+
+
+if __name__ == "__main__":
+    copia("teste.txt","copia.txt")
