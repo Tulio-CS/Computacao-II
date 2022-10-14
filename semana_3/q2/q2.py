@@ -13,10 +13,12 @@ def ip (arquivo):
                 relatorio.write(str(linha).rstrip("\n") + " |IP valido|\n")
             else:
                 relatorio.write(str(linha).rstrip("\n") + " |IP invalido|\n")
+    except FileNotFoundError:
+        print("O arquivo inserido não existe, um arquivo com esse nome sera criado")
+        ips = open(arquivo,"w")
+    finally:
         ips.close()
         relatorio.close()
-    except FileNotFoundError:
-        print("O arquivo inserido não existe")
 
 if __name__ == "__main__":
     ip("ip.txt")
