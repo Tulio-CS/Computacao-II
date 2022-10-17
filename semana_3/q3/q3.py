@@ -47,7 +47,6 @@ class arquivo:
             arq = open(self.arquivo, "r")
             for linha in arq:
                 checagem = linha.split(" ",1)
-                print(linha)
                 numeros = checagem[1].split(" ")
                 print("|{} maximo = {} minimo ={}|".format(checagem[0],max(numeros, key = int),min(numeros , key = int)))
         except FileNotFoundError:

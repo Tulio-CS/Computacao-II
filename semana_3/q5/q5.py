@@ -1,6 +1,8 @@
 #Aluno:Tulio Castro Silva
 
 def analise(arquivo):
+    """Função que analisa um texto inserido, diz o numero de linhas, linhas em branco, numero de frases, palavras
+    e caracteres, tambem analisa se o arquivo inserido e valido"""
     try:
         relatorio = open("relatorio.txt", "w")
         conteudo = open(arquivo,"r")
@@ -12,14 +14,14 @@ def analise(arquivo):
         for linha in conteudo:
             num_linhas += 1
             linha = linha.lower()
-            linha = linha.split(" ")
-            if linha == ["\n"]:
+            linha = linha.split(" ") # separando a linha nos espaços para determinar o numero de frases
+            if linha == ["\n"]: # avaliando se a linha e uma linha em branco
                 num_linhas_branco += 1
             else:
-                num_palavras += len(linha)
+                num_palavras += len(linha) #numero de palavras numero de itens na lista separada com espacos 
                 for palavra in linha:
-                    num_caracteres += len(palavra)
-                    for letra in palavra:
+                    num_caracteres += len(palavra) # contando o numero de caracteres 
+                    for letra in palavra: # procurando pontos que indicam final de frase 
                         if letra in ".,!?":
                             num_frases += 1
         relatorio.write("Numero de linhas : {}\n".format(num_linhas))
