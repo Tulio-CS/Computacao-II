@@ -14,6 +14,7 @@ class Idades:
                 else:
                     print("erro na inicialização da lista, uma string foi encontrada, inicializando lista vazia")
                     self.__listaidades = []
+                    
     def inserir_idades(self,idade):
         if isinstance(idade,int):
             self.__listaidades.append(idade)

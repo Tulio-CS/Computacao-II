@@ -1,6 +1,6 @@
 
 
-class Triangulo():
+class Triangulo:
     def __init__(self,a,b,c):
         lados = [a,b,c]
         if self.__validade(lados):
