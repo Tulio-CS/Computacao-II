@@ -1,10 +1,10 @@
 # Aluno: Tulio Castro Silva
 
-
 def nomes():
+    """Funcao que recebe nomes como input e retorna apenas o primeiro nome"""
     lista = []
     while True:
-        x = input("Digite um nome:")
+        x = input("Digite um nome:\n(Para parar insira um nome vazio)\n")
         if x == "":
             break
         elif x in lista:

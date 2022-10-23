@@ -1,3 +1,4 @@
+#Aluno: Tulio Castro Silva
 
 def contar(arquivo):
     """Funcao que calcula o numero de vogais de um texto
