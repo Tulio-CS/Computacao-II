@@ -4,15 +4,14 @@ class Idades:
     def __init__(self, lista = []):
         """Iniciando a classe idades, inicia uma lista vazia se nenhum valor é inserido ou se a lista contem strings"""
         if type(lista) != list: 
-            raise Exception("Tipo de entrada invalido")
+            raise TypeError("Tipo de entrada invalido")
         else:
             self.__listaidades = sorted(lista)
             for i in lista:
                 if isinstance(i,int) and i > 0:
                     continue
                 else:
-                    print("erro na inicialização da lista, uma string foi encontrada, inicializando lista vazia")
-                    self.__listaidades = []
+                    raise TypeError("Entrada invalida")
                     
     def inserir_idades(self,idade):
         """Funcao que insere uma idade na lista se possivel"""
@@ -34,10 +33,11 @@ class Idades:
 
 if __name__ == "__main__":
     i = Idades()
-    i.inserir_idades("10")
+    i.inserir_idades(5)
     i.inserir_idades(10)
     i.inserir_idades(20)
     i.inserir_idades(11)
     i.inserir_idades(21)
     print("A media das idedes é {}".format(i.media()))
     print(i)
+    i.inserir_idades("10")

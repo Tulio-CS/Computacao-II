@@ -23,7 +23,7 @@ class controller:
                 return self.listaAlunos[i]
             else:
                 continue
-        return False
+        raise("Aluno não encontrado")
     
     def pesquisarAlunoPorCPF(self,cpf):
         """Funcao que pesquisa o aluno pelo cpf"""
@@ -32,7 +32,7 @@ class controller:
                 return self.listaAlunos[i]
             else:
                 continue
-        return False
+        raise("Aluno não encontrado")
     
     def incluirProfessor(self,obj):
         """Funcao que insere um professor na lista de alunos checa se o tipo inserido e valido"""
@@ -48,7 +48,7 @@ class controller:
                 return self.listaProfessores[i]
             else:
                 continue
-        return False
+        raise("Professor não encontrado")
     
     def pesquisarProfessorPorCPF(self,cpf):
         """Funcao que pesquisa o professor por cpf"""
@@ -57,5 +57,5 @@ class controller:
                 return self.listaProfessores[i]
             else:
                 continue
-        return False
+        raise("Professor não encontrado")
 

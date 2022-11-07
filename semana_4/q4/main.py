@@ -24,4 +24,5 @@ if __name__ == "__main__":
     (con.pesquisarAlunoPorCPF("00000000002").visualizarMedia())
     bruno.calcularSalario()
     print(con.pesquisarProfessorPorNome("bruno").salario)
+    con.pesquisarAlunoPorCPF("cpfinexistente")
         
