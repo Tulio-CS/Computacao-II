@@ -1,4 +1,7 @@
+#Aluno: Tulio Castro Silva
+
 from tkinter import * 
+
 class window:
     def __init__(self,master=None):
         #Variaveis
@@ -102,7 +105,7 @@ class window:
         self.botao_pos.bind("<Button-1>",self.pos)
 
         #Linha 5
-        self.botao0 = Button(master,text="0",font=("Arial",25),bg="#3F3F3F",fg ="white",height=1,width=3,command=lambda: self.numero(0))
+        self.botao0 = Button(master,text="0",font=("Arial",25),bg="#3F3F3F",fg ="white",height=1,width=3,command= lambda: self.numero(0))
         self.botao0["border"] = "0"
         self.botao0.place(x=60,y=402)
 
@@ -142,6 +145,7 @@ class window:
              self.sup_val["text"] = "{} ÷".format(root.getvar("result"))
              root.setvar("operator","/")
              root.setvar("result","ans")
+             self.sub_val["text"] = ""
 
     def mul(self,event):
         if root.getvar("operator") == "":
@@ -156,6 +160,7 @@ class window:
              self.sup_val["text"] = "{} x".format(root.getvar("result"))
              root.setvar("operator","x")
              root.setvar("result","ans")
+             self.sub_val["text"] = ""
 
     def pos(self,event):
         if root.getvar("operator") == "":
@@ -170,6 +175,7 @@ class window:
              self.sup_val["text"] = "{} +".format(root.getvar("result"))
              root.setvar("operator","+")
              root.setvar("result","ans")
+             self.sub_val["text"] = ""
     
 
     def neg(self,event):
@@ -185,6 +191,7 @@ class window:
              self.sup_val["text"] = "{} -".format(root.getvar("result"))
              root.setvar("operator","-")
              root.setvar("result","ans")
+             self.sub_val["text"] = ""
     
     def numero(self,val):
         if len(self.sub_val["text"]) < 18:

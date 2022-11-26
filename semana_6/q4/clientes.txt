@@ -1,4 +1,0 @@
-mateus|12345678912|Solteiro|1
-tulio|12345678912|Solteiro|1
-1|12345678912|Casado|1
-mateus|12345678912|Solteiro|1

@@ -1,5 +1,8 @@
+#Aluno: Tulio Castro Silva
+
 from tkinter import * 
 from math import sqrt
+
 class janela:
     def __init__(self,master= None):
         #Titulo
